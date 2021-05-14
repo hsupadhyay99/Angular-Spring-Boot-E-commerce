@@ -17,25 +17,64 @@ import java.util.Date;
 @Data
 @DynamicUpdate
 public class ProductCategory implements Serializable {
-    @Id
-    @GeneratedValue
-    private Integer categoryId;
+	@Id
+	@GeneratedValue
+	private Integer categoryId;
 
-    private String categoryName;
+	private String categoryName;
 
-    @NaturalId
-    private Integer categoryType;
+	@NaturalId
+	private Integer categoryType;
 
-    private Date createTime;
+	private Date createTime;
 
-    private Date updateTime;
+	private Date updateTime;
 
+	public Integer getCategoryId() {
+		return categoryId;
+	}
 
-    public ProductCategory() {
-    }
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
+	}
 
-    public ProductCategory(String categoryName, Integer categoryType) {
-        this.categoryName = categoryName;
-        this.categoryType = categoryType;
-    }
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public Integer getCategoryType() {
+		return categoryType;
+	}
+
+	public void setCategoryType(Integer categoryType) {
+		this.categoryType = categoryType;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public ProductCategory() {
+	}
+
+	public ProductCategory(String categoryName, Integer categoryType) {
+		this.categoryName = categoryName;
+		this.categoryType = categoryType;
+	}
 }
